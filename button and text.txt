@@ -1,0 +1,14 @@
+        private void button1_Click(object sender, EventArgs e)
+        {
+           if(Convert.ToDouble(txtVoltage.Text)>0&& Convert.ToDouble(txtR1.Text) > 0&& Convert.ToDouble(txtR2.Text) > 0&&Convert.ToDouble(txtR3.Text) > 0&&Convert.ToDouble(txtR4.Text) > 0)
+            {if(radioButton1.Checked)
+                MessageBox.Show($"Current:{Math.Round( caculate.current1(Convert.ToDouble(txtVoltage.Text), Convert.ToDouble(txtR1.Text), Convert.ToDouble(txtR2.Text), Convert.ToDouble(txtR3.Text), Convert.ToDouble(txtR4.Text)),3 )}A\nPower:{Math.Round (Convert.ToDouble(txtVoltage.Text) * caculate.current1(Convert.ToDouble(txtVoltage.Text), Convert.ToDouble(txtR1.Text), Convert.ToDouble(txtR2.Text), Convert.ToDouble(txtR3.Text), Convert.ToDouble(txtR4.Text)),3)}W");
+            else
+
+                    MessageBox.Show($"Current:{Math.Round( caculate.current2(Convert.ToDouble(txtVoltage.Text), Convert.ToDouble(txtR1.Text), Convert.ToDouble(txtR2.Text), Convert.ToDouble(txtR3.Text), Convert.ToDouble(txtR4.Text)),3 )}A\nPower:{Math.Round( Convert.ToDouble(txtVoltage.Text) * caculate.current1(Convert.ToDouble(txtVoltage.Text), Convert.ToDouble(txtR1.Text), Convert.ToDouble(txtR2.Text), Convert.ToDouble(txtR3.Text), Convert.ToDouble(txtR4.Text)),3)}W");
+            }
+           else
+            {
+                MessageBox.Show("error");
+            }
+        }
